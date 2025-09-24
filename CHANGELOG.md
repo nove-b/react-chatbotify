@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## v2.3.1 (25-09-2025)
+
+**Fixed:**
+- Fixed an issue where tooltip was not respecting updates to its settings
+
 ## v2.3.0 (14-08-2025)
 
 **Added:**
