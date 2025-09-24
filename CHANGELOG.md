@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## v2.3.2 (25-09-2025)
+
+**Fixed:**
+- Fixed an issue where chat button hovered style does not inherit base style
+
 ## v2.3.1 (25-09-2025)
 
 **Fixed:**
