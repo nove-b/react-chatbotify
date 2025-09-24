@@ -36,7 +36,7 @@ const ChatBotButton = () => {
 	// styles for hovered chat button
 	const chatButtonHoveredStyle: React.CSSProperties = {
 		transform: "scale(1.05)",
-		...styles.chatButtonStyle, // by default inherit the base style
+		...chatButtonStyle, // by default inherit the base style
 		...styles.chatButtonHoveredStyle
 	};
 
