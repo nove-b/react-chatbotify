@@ -72,7 +72,13 @@ const ChatBotTooltip = () => {
 			setShowTooltip(!isChatWindowOpen);
 		}
 
-	}, [isChatWindowOpen]);
+	}, [
+		isChatWindowOpen,
+		isDesktop,
+		shownTooltipOnStart,
+		styles.chatButtonStyle?.width,
+		settings.tooltip?.mode,
+	]);
 
 	// styles for tooltip
 	const tooltipStyle: React.CSSProperties = {
