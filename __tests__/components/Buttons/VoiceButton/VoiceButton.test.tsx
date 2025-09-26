@@ -10,7 +10,7 @@ import { useTextAreaInternal } from "../../../../src/hooks/internal/useTextAreaI
 import { TestChatBotProvider } from "../../../__mocks__/TestChatBotContext";
 import { voiceIcon, voiceIconDisabled } from "../../../__mocks__/fileMock";
 
-jest.mock("../../../src/hooks/internal/useTextAreaInternal");
+jest.mock("../../../../src/hooks/internal/useTextAreaInternal");
 
 /**
  * Helper function to render VoiceButton with different settings.

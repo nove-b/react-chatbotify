@@ -7,11 +7,11 @@ import { useSettingsContext } from "../../../../src/context/SettingsContext";
 import { useStylesContext } from "../../../../src/context/StylesContext";
 
 // Mock the contexts
-jest.mock("../../../src/context/SettingsContext", () => ({
+jest.mock("../../../../src/context/SettingsContext", () => ({
 	useSettingsContext: jest.fn(),
 }));
 
-jest.mock("../../../src/context/StylesContext", () => ({
+jest.mock("../../../../src/context/StylesContext", () => ({
 	useStylesContext: jest.fn(),
 }));
 

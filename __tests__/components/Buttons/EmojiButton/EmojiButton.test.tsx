@@ -12,11 +12,11 @@ import { useSettingsContext } from "../../../../src/context/SettingsContext";
 import { DefaultSettings } from "../../../../src/constants/internal/DefaultSettings";
 import { useStylesContext } from "../../../../src/context/StylesContext";
 import { actionDisabledIcon, emojiIcon } from "../../../__mocks__/fileMock";
-jest.mock("../../../src/context/BotStatesContext");
-jest.mock("../../../src/context/BotRefsContext");
-jest.mock("../../../src/context/SettingsContext");
-jest.mock("../../../src/hooks/internal/useTextAreaInternal");
-jest.mock("../../../src/context/StylesContext");
+jest.mock("../../../../src/context/BotStatesContext");
+jest.mock("../../../../src/context/BotRefsContext");
+jest.mock("../../../../src/context/SettingsContext");
+jest.mock("../../../../src/hooks/internal/useTextAreaInternal");
+jest.mock("../../../../src/context/StylesContext");
 
 describe("EmojiButton component", () => {
 	const mockInputRef = { current: document.createElement("input") };

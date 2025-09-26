@@ -5,7 +5,7 @@ import ChatMessagePrompt from "../../../../src/components/ChatBotBody/ChatMessag
 import { useBotStatesContext } from "../../../../src/context/BotStatesContext";
 
 // Mock contexts
-jest.mock("../../../src/context/BotRefsContext", () => ({
+jest.mock("../../../../src/context/BotRefsContext", () => ({
 	useBotRefsContext: jest.fn(() => ({
 		chatBodyRef: {
 			current: {
@@ -18,11 +18,11 @@ jest.mock("../../../src/context/BotRefsContext", () => ({
 	})),
 }));
 
-jest.mock("../../../src/context/BotStatesContext", () => ({
+jest.mock("../../../../src/context/BotStatesContext", () => ({
 	useBotStatesContext: jest.fn(),
 }));
 
-jest.mock("../../../src/context/SettingsContext", () => ({
+jest.mock("../../../../src/context/SettingsContext", () => ({
 	useSettingsContext: jest.fn(() => ({
 		settings: {
 			general: { primaryColor: "#000" },
@@ -34,7 +34,7 @@ jest.mock("../../../src/context/SettingsContext", () => ({
 	})),
 }));
 
-jest.mock("../../../src/context/StylesContext", () => ({
+jest.mock("../../../../src/context/StylesContext", () => ({
 	useStylesContext: jest.fn(() => ({
 		styles: {
 			chatMessagePromptStyle: { color: "#fff", borderColor: "#ccc" },

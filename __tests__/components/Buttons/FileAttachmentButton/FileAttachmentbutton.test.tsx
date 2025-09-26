@@ -9,20 +9,20 @@ import { usePathsInternal } from "../../../../src/hooks/internal/usePathsInterna
 import { getMediaFileDetails } from "../../../../src/utils/mediaFileParser";
 import { useBotRefsContext } from "../../../../src/context/BotRefsContext";
 
-jest.mock("../../../src/hooks/internal/useMessagesInternal", () => ({
+jest.mock("../../../../src/hooks/internal/useMessagesInternal", () => ({
 	useMessagesInternal: jest.fn(),
 }));
-jest.mock("../../../src/hooks/internal/useSubmitInputInternal", () => ({
+jest.mock("../../../../src/hooks/internal/useSubmitInputInternal", () => ({
 	useSubmitInputInternal: jest.fn(),
 }));
-jest.mock("../../../src/hooks/internal/usePathsInternal", () => ({
+jest.mock("../../../../src/hooks/internal/usePathsInternal", () => ({
 	usePathsInternal: jest.fn(),
 }));
-jest.mock("../../../src/utils/mediaFileParser", () => ({
+jest.mock("../../../../src/utils/mediaFileParser", () => ({
 	getMediaFileDetails: jest.fn(),
 }));
-jest.mock("../../../src/context/BotRefsContext", () => ({
-	...jest.requireActual("../../../src/context/BotRefsContext"),
+jest.mock("../../../../src/context/BotRefsContext", () => ({
+	...jest.requireActual("../../../../src/context/BotRefsContext"),
 	BotRefsProvider: ({ children }: { children: React.ReactNode }) => (
 		<div data-testid="bot-refs-provider">{children}</div>
 	),
@@ -174,7 +174,7 @@ describe("FileAttachmentButton Component", () => {
 		const mockFlow = { currentPath: { file: mockFileHandler } };
     
 		(useBotRefsContext as jest.Mock).mockReturnValueOnce({
-			...jest.requireMock("../../../src/context/BotRefsContext").useBotRefsContext(),
+			...jest.requireMock("../../../../src/context/BotRefsContext").useBotRefsContext(),
 			flowRef: { current: mockFlow },
 			inputRef: { current: { value: "test input" } },
 		});

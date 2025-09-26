@@ -13,9 +13,9 @@ import { DefaultSettings } from "../../../../src/constants/internal/DefaultSetti
 import { closeChatIcon } from "../../../__mocks__/fileMock";
 
 // Mock the hooks used in the component
-jest.mock("../../../src/hooks/internal/useChatWindowInternal");
-jest.mock("../../../src/context/SettingsContext");
-jest.mock("../../../src/context/StylesContext");
+jest.mock("../../../../src/hooks/internal/useChatWindowInternal");
+jest.mock("../../../../src/context/SettingsContext");
+jest.mock("../../../../src/context/StylesContext");
 
 /**
  * Test for CloseChatButton component.

@@ -7,7 +7,7 @@ import { Params } from "../../../src/types/Params";
 import { Block } from "../../../src/types/Block";
 
 // Mocking the postProcessBlock function from BlockService
-jest.mock("../../src/services/BlockService/BlockService", () => ({
+jest.mock("../../../src/services/BlockService/BlockService", () => ({
 	postProcessBlock: jest.fn(),
 }));
 

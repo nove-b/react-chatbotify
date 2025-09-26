@@ -14,10 +14,10 @@ import { DefaultStyles } from "../../../../src/constants/internal/DefaultStyles"
 
 import { sendIcon } from "../../../__mocks__/fileMock";
 
-jest.mock("../../../src/context/SettingsContext");
-jest.mock("../../../src/context/BotStatesContext");
-jest.mock("../../../src/hooks/internal/useSubmitInputInternal");
-jest.mock("../../../src/context/StylesContext");
+jest.mock("../../../../src/context/SettingsContext");
+jest.mock("../../../../src/context/BotStatesContext");
+jest.mock("../../../../src/hooks/internal/useSubmitInputInternal");
+jest.mock("../../../../src/context/StylesContext");
 
 /**
  * Test for SendButton component.

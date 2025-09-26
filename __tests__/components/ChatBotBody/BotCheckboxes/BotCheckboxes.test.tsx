@@ -8,16 +8,16 @@ import { useSubmitInputInternal } from "../../../../src/hooks/internal/useSubmit
 import BotCheckboxes from "../../../../src/components/ChatBotBody/BotCheckboxes/BotCheckboxes";
 
 // Mocking the context and hook
-jest.mock("../../../src/context/SettingsContext", () => ({
+jest.mock("../../../../src/context/SettingsContext", () => ({
 	useSettingsContext: jest.fn(),
 }));
-jest.mock("../../../src/context/StylesContext", () => ({
+jest.mock("../../../../src/context/StylesContext", () => ({
 	useStylesContext: jest.fn(),
 }));
-jest.mock("../../../src/context/PathsContext", () => ({
+jest.mock("../../../../src/context/PathsContext", () => ({
 	usePathsContext: jest.fn(),
 }));
-jest.mock("../../../src/hooks/internal/useSubmitInputInternal", () => ({
+jest.mock("../../../../src/hooks/internal/useSubmitInputInternal", () => ({
 	useSubmitInputInternal: jest.fn(),
 }));
 
