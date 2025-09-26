@@ -2,9 +2,9 @@ import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import LoadingSpinner from "../../src/components/LoadingSpinner/LoadingSpinner";
-import { DefaultSettings } from "../../src/constants/internal/DefaultSettings";
-import { TestChatBotProvider } from "../__mocks__/TestChatBotContext";
+import LoadingSpinner from "../../../src/components/LoadingSpinner/LoadingSpinner";
+import { DefaultSettings } from "../../../src/constants/internal/DefaultSettings";
+import { TestChatBotProvider } from "../../__mocks__/TestChatBotContext";
 
 /**
  * Helper function to render LoadingSpinner with mocked settings and styles.

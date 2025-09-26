@@ -2,9 +2,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import MediaDisplay from "../../../src/components/ChatBotBody/MediaDisplay/MediaDisplay";
-import { useSettingsContext } from "../../../src/context/SettingsContext";
-import { useStylesContext } from "../../../src/context/StylesContext";
+import MediaDisplay from "../../../../src/components/ChatBotBody/MediaDisplay/MediaDisplay";
+import { useSettingsContext } from "../../../../src/context/SettingsContext";
+import { useStylesContext } from "../../../../src/context/StylesContext";
 
 // Mock the contexts
 jest.mock("../../../src/context/SettingsContext", () => ({

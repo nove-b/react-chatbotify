@@ -4,11 +4,11 @@ import { expect } from "@jest/globals";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/jest-globals";
 
-import NotificationButton from "../../../src/components/Buttons/NotificationButton/NotificationButton";
-import { DefaultSettings } from "../../../src/constants/internal/DefaultSettings";
+import NotificationButton from "../../../../src/components/Buttons/NotificationButton/NotificationButton";
+import { DefaultSettings } from "../../../../src/constants/internal/DefaultSettings";
 
-import { TestChatBotProvider } from "../../__mocks__/TestChatBotContext"
-import { notificationIcon, notificationIconDisabled } from "../../__mocks__/fileMock";
+import { TestChatBotProvider } from "../../../__mocks__/TestChatBotContext"
+import { notificationIcon, notificationIconDisabled } from "../../../__mocks__/fileMock";
 
 /**
  * Helper function to render NotificationButton with different settings.

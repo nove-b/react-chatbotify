@@ -4,11 +4,11 @@ import { expect } from "@jest/globals";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/jest-globals";
 
-import VoiceButton from "../../../src/components/Buttons/VoiceButton/VoiceButton";
-import { DefaultSettings } from "../../../src/constants/internal/DefaultSettings";
-import { useTextAreaInternal } from "../../../src/hooks/internal/useTextAreaInternal";
-import { TestChatBotProvider } from "../../__mocks__/TestChatBotContext";
-import { voiceIcon, voiceIconDisabled } from "../../__mocks__/fileMock";
+import VoiceButton from "../../../../src/components/Buttons/VoiceButton/VoiceButton";
+import { DefaultSettings } from "../../../../src/constants/internal/DefaultSettings";
+import { useTextAreaInternal } from "../../../../src/hooks/internal/useTextAreaInternal";
+import { TestChatBotProvider } from "../../../__mocks__/TestChatBotContext";
+import { voiceIcon, voiceIconDisabled } from "../../../__mocks__/fileMock";
 
 jest.mock("../../../src/hooks/internal/useTextAreaInternal");
 

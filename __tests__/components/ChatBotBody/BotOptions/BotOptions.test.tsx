@@ -1,11 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { useSettingsContext } from "../../../src/context/SettingsContext";
-import { useStylesContext } from "../../../src/context/StylesContext";
-import { usePathsContext } from "../../../src/context/PathsContext";
-import { useSubmitInputInternal } from "../../../src/hooks/internal/useSubmitInputInternal";
-import BotOptions from "../../../src/components/ChatBotBody/BotOptions/BotOptions";
+import { useSettingsContext } from "../../../../src/context/SettingsContext";
+import { useStylesContext } from "../../../../src/context/StylesContext";
+import { usePathsContext } from "../../../../src/context/PathsContext";
+import { useSubmitInputInternal } from "../../../../src/hooks/internal/useSubmitInputInternal";
+import BotOptions from "../../../../src/components/ChatBotBody/BotOptions/BotOptions";
 
 // Mocking the context and hook
 jest.mock("../../../src/context/SettingsContext", () => ({

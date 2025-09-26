@@ -1,13 +1,13 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import FileAttachmentButton from "../../../src/components/Buttons/FileAttachmentButton/FileAttachmentButton";
-import { TestChatBotProvider } from "../../__mocks__/TestChatBotContext";
-import { useMessagesInternal } from "../../../src/hooks/internal/useMessagesInternal";
-import { useSubmitInputInternal } from "../../../src/hooks/internal/useSubmitInputInternal";
-import { usePathsInternal } from "../../../src/hooks/internal/usePathsInternal";
-import { getMediaFileDetails } from "../../../src/utils/mediaFileParser";
-import { useBotRefsContext } from "../../../src/context/BotRefsContext";
+import FileAttachmentButton from "../../../../src/components/Buttons/FileAttachmentButton/FileAttachmentButton";
+import { TestChatBotProvider } from "../../../__mocks__/TestChatBotContext";
+import { useMessagesInternal } from "../../../../src/hooks/internal/useMessagesInternal";
+import { useSubmitInputInternal } from "../../../../src/hooks/internal/useSubmitInputInternal";
+import { usePathsInternal } from "../../../../src/hooks/internal/usePathsInternal";
+import { getMediaFileDetails } from "../../../../src/utils/mediaFileParser";
+import { useBotRefsContext } from "../../../../src/context/BotRefsContext";
 
 jest.mock("../../../src/hooks/internal/useMessagesInternal", () => ({
 	useMessagesInternal: jest.fn(),

@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import ChatMessagePrompt from "../../../src/components/ChatBotBody/ChatMessagePrompt/ChatMessagePrompt";
-import { useBotStatesContext } from "../../../src/context/BotStatesContext";
+import ChatMessagePrompt from "../../../../src/components/ChatBotBody/ChatMessagePrompt/ChatMessagePrompt";
+import { useBotStatesContext } from "../../../../src/context/BotStatesContext";
 
 // Mock contexts
 jest.mock("../../../src/context/BotRefsContext", () => ({

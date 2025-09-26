@@ -4,11 +4,11 @@ import { expect } from "@jest/globals";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/jest-globals";
 
-import AudioButton from "../../../src/components/Buttons/AudioButton/AudioButton";
-import { DefaultSettings } from "../../../src/constants/internal/DefaultSettings";
+import AudioButton from "../../../../src/components/Buttons/AudioButton/AudioButton";
+import { DefaultSettings } from "../../../../src/constants/internal/DefaultSettings";
 
-import { TestChatBotProvider } from "../../__mocks__/TestChatBotContext";
-import { audioIcon, audioIconDisabled } from "../../__mocks__/fileMock";
+import { TestChatBotProvider } from "../../../__mocks__/TestChatBotContext";
+import { audioIcon, audioIconDisabled } from "../../../__mocks__/fileMock";
 
 /**
  * Helper function to render AudioButton with different settings.

@@ -4,15 +4,15 @@ import { expect } from "@jest/globals";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/jest-globals";
 
-import SendButton from "../../../src/components/Buttons/SendButton/SendButton";
-import { DefaultSettings } from "../../../src/constants/internal/DefaultSettings";
-import { useSettingsContext } from "../../../src/context/SettingsContext";
-import { useBotStatesContext } from "../../../src/context/BotStatesContext";
-import { useSubmitInputInternal } from "../../../src/hooks/internal/useSubmitInputInternal";
-import { useStylesContext } from "../../../src/context/StylesContext";
-import { DefaultStyles } from "../../../src/constants/internal/DefaultStyles";
+import SendButton from "../../../../src/components/Buttons/SendButton/SendButton";
+import { DefaultSettings } from "../../../../src/constants/internal/DefaultSettings";
+import { useSettingsContext } from "../../../../src/context/SettingsContext";
+import { useBotStatesContext } from "../../../../src/context/BotStatesContext";
+import { useSubmitInputInternal } from "../../../../src/hooks/internal/useSubmitInputInternal";
+import { useStylesContext } from "../../../../src/context/StylesContext";
+import { DefaultStyles } from "../../../../src/constants/internal/DefaultStyles";
 
-import { sendIcon } from "../../__mocks__/fileMock";
+import { sendIcon } from "../../../__mocks__/fileMock";
 
 jest.mock("../../../src/context/SettingsContext");
 jest.mock("../../../src/context/BotStatesContext");
