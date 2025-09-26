@@ -1,7 +1,7 @@
 import { expect } from "@jest/globals";
-import { processMessage } from "../../src/services/BlockService/MessageProcessor";
-import { Params } from "../../src/types/Params";
-import { Block } from "../../src/types/Block";
+import { processMessage } from "../../../src/services/BlockService/MessageProcessor";
+import { Params } from "../../../src/types/Params";
+import { Block } from "../../../src/types/Block";
 
 describe("MessageProcessor", () => {
 	let mockParams: Params;

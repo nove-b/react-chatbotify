@@ -1,8 +1,8 @@
 import React from "react";
 import { expect } from "@jest/globals";
-import { processComponent } from "../../src/services/BlockService/ComponentProcessor";
-import { Params } from "../../src/types/Params";
-import { Block } from "../../src/types/Block";
+import { processComponent } from "../../../src/services/BlockService/ComponentProcessor";
+import { Params } from "../../../src/types/Params";
+import { Block } from "../../../src/types/Block";
 
 
 describe("ComponentProcessor", () => {
