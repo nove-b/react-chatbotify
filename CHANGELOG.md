@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## v2.4.0 (16-10-2025)
+
+**Added:**
+- Added a new `getMessage` function to the `useMessages` hook for easy fetching of messages
+
 ## v2.3.2 (25-09-2025)
 
 **Fixed:**

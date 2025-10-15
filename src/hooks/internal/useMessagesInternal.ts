@@ -414,6 +414,46 @@ export const useMessagesInternal = () => {
 		handlePostMessagesUpdate(newMessages);
 	}, [handlePostMessagesUpdate, syncedMessagesRef])
 
+
+	/**
+	 * Gets messages with an optional offset. 
+	 * If offset is 0, starts from the latest user message.
+	 * If offset is 1, starts from the second last user message, and so on.
+	 * 
+	 * @param sender sender of the message
+	 * @param numMessages number of messages to fetch, defaults to 1
+	 * @param offset number of user messages to go back by, defaults to 0
+	 */
+	const getMessage = useCallback(
+		(sender: string, numMessages: number = 1, offset: number = 0): Message[] | null => {
+			const currentMessages = syncedMessagesRef.current;
+			sender = sender.toUpperCase();
+			const foundMessages: Message[] = [];
+
+			// track how many sender messages skipped to reach the offset
+			let skip = offset;
+
+			for (let index = currentMessages.length - 1; index >= 0; index--) {
+				const message = currentMessages[index];
+				if (message?.sender?.toUpperCase() === sender) {
+					if (skip > 0) {
+						skip--;
+						continue;
+					}
+
+					// collect messages until numMessages is reached
+					foundMessages.push(message);
+					if (foundMessages.length === numMessages) {
+						break;
+					}
+				}
+			}
+
+			return foundMessages.length > 0 ? foundMessages : null;
+		},
+		[syncedMessagesRef]
+	);
+
 	return {
 		simulateStreamMessage,
 		injectMessage,
@@ -421,6 +461,7 @@ export const useMessagesInternal = () => {
 		streamMessage,
 		endStreamMessage,
 		replaceMessages,
+		getMessage,
 		messages,
 	};
 };
