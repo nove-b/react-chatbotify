@@ -416,18 +416,16 @@ export const useMessagesInternal = () => {
 
 
 	/**
-	 * Gets messages with an optional offset. 
-	 * If offset is 0, starts from the latest user message.
-	 * If offset is 1, starts from the second last user message, and so on.
+	 * Gets messages based on optional sender, numMessages and offset fields.
 	 * 
-	 * @param sender sender of the message
-	 * @param numMessages number of messages to fetch, defaults to 1
-	 * @param offset number of user messages to go back by, defaults to 0
+	 * @param sender sender of the message (if unspecified, defaults to fetching for all senders)
+	 * @param numMessages number of messages to fetch (if unspecified, defaults to all messages from the sender)
+	 * @param offset number of user messages to go back by (if unspecified, defaults to 0)
 	 */
-	const getMessage = useCallback(
-		(sender: string, numMessages: number = 1, offset: number = 0): Message[] | null => {
+	const getMessages = useCallback(
+		(sender?: string, numMessages?: number, offset: number = 0): Message[] | null => {
 			const currentMessages = syncedMessagesRef.current;
-			sender = sender.toUpperCase();
+			const senderUpper = sender ? sender.toUpperCase() : null;
 			const foundMessages: Message[] = [];
 
 			// track how many sender messages skipped to reach the offset
@@ -435,7 +433,7 @@ export const useMessagesInternal = () => {
 
 			for (let index = currentMessages.length - 1; index >= 0; index--) {
 				const message = currentMessages[index];
-				if (message?.sender?.toUpperCase() === sender) {
+				if (!senderUpper || message?.sender?.toUpperCase() === senderUpper) {
 					if (skip > 0) {
 						skip--;
 						continue;
@@ -443,7 +441,7 @@ export const useMessagesInternal = () => {
 
 					// collect messages until numMessages is reached
 					foundMessages.push(message);
-					if (foundMessages.length === numMessages) {
+					if (numMessages !== undefined && foundMessages.length === numMessages) {
 						break;
 					}
 				}
@@ -461,7 +459,7 @@ export const useMessagesInternal = () => {
 		streamMessage,
 		endStreamMessage,
 		replaceMessages,
-		getMessage,
+		getMessages,
 		messages,
 	};
 };

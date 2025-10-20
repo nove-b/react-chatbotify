@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v2.4.1 (18-10-2025)
+
+**Fixed:**
+- Renamed the previously misnamed `getMessage` function to `getMessages`
+- The `sender` parameter is now optional inside `getMessages` (if unspecified, fetches for all senders)
+- The `numMessages` parameter is now optional inside `getMessages` (if unspecified, fetches all messages)
+
 ## v2.4.0 (16-10-2025)
 
 **Added:**
