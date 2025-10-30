@@ -6,6 +6,13 @@ import { useStylesInternal } from "../../../src/hooks/internal/useStylesInternal
 
 jest.mock("../../../src/hooks/internal/useSettingsInternal");
 jest.mock("../../../src/hooks/internal/useStylesInternal");
+jest.mock("../../../src/viteconfig", () => ({
+	viteConfig: {
+		DEFAULT_URL: "http://localhost:mock",
+		DEFAULT_EXPIRATION: "60",
+		CACHE_KEY_PREFIX: "VITE_THEME_CACHE_KEY_PREFIX",
+	},
+}));
 
 describe("usePluginsInternal", () => {
 	const updateSettingsMock = jest.fn();
